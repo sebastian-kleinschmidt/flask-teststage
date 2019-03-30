@@ -1,10 +1,9 @@
 from flask import Flask
 app = Flask(__name__)
 
+@app.route('/')
 def index():
     return '<h1>Hello All!</h1>'
-app.add_url_rule('/', 'index', index)
-
 
 @app.route('/hellouser/<name>')
 def user(name):
